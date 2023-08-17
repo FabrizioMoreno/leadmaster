@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "879425360788",
+    "project_id": "leadmaster-53d53",
+    "storage_bucket": "leadmaster-53d53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879425360788:android:35a63a0f35deccfbacf581",
+        "android_client_info": {
+          "package_name": "com.example.leadmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879425360788-lau55uv7343jl1qegt4ou3gicld6je6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjrGvZnGXxHWU5dcvoQnc-d1P-D4-_Ou0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879425360788-lau55uv7343jl1qegt4ou3gicld6je6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
