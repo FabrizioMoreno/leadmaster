@@ -4,15 +4,16 @@ import 'package:leadmaster/Components/my_textfiled.dart';
 import 'package:leadmaster/Components/square_tile.dart';
 import 'package:leadmaster/Components/textfieldPassword.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginPageState();
+  State<SignUp> createState() => _SignUpPageState();
 }
-class _LoginPageState extends State<Login>{
+class _SignUpPageState extends State<SignUp>{
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final emailController = TextEditingController();
   bool _isInvisible = true;
   @override
   Widget build(BuildContext context){
@@ -27,7 +28,7 @@ class _LoginPageState extends State<Login>{
 
           children: <Widget>[
             const SizedBox(height: 30),
-            const Icon(Icons.lock,
+            const Icon(Icons.person,
               size: 80,),
             const SizedBox(height: 30),
 
@@ -43,14 +44,14 @@ class _LoginPageState extends State<Login>{
               obscureText: false,),
             const SizedBox(height: 10,),
             MyTextfieldPassword(
-                controller: passwordController,
-                hintText: 'Contraseña',
-                obscureText: _isInvisible,
-                onPre: (){
-                  setState(() {
-                    _isInvisible = !_isInvisible;
-                  });
-                },
+              controller: passwordController,
+              hintText: 'Contraseña',
+              obscureText: _isInvisible,
+              onPre: (){
+                setState(() {
+                  _isInvisible = !_isInvisible;
+                });
+              },
             ),
             const SizedBox(height: 10,),
 
@@ -72,7 +73,7 @@ class _LoginPageState extends State<Login>{
               onTap: signUserIn,text: "Iniciar Sesion",
             ),
 
-            const SizedBox(height: 30,),
+            const SizedBox(height: 25,),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child :Row(
@@ -98,7 +99,7 @@ class _LoginPageState extends State<Login>{
                 )
             ),
 
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
 
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -115,7 +116,7 @@ class _LoginPageState extends State<Login>{
               children: [
                 Text('No tiene cuenta?',style: TextStyle(color: Colors.grey[700]),),
                 const SizedBox(width: 4,),
-                const Text('Registrate ahora', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),)
+                const Text(' ahora', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),)
               ],
             )
           ],
@@ -125,8 +126,7 @@ class _LoginPageState extends State<Login>{
     );
   }
   void signUserIn(){
-    setState(){
 
-    }
   }
+
 }

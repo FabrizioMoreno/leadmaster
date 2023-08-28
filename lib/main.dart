@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:leadmaster/Components/my_button.dart';
-import 'package:leadmaster/Components/my_textfiled.dart';
-import 'package:leadmaster/Components/square_tile.dart';
-import 'package:leadmaster/pages/login.dart';
+import 'package:leadmaster/pages/login_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Inicializa Firebase antes de runApp
+  runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'LeadMaster',
-      theme: ThemeData(
+        debugShowCheckedModeBanner: false,
+        title: 'LeadMaster',
+        theme: ThemeData(
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
