@@ -56,21 +56,21 @@ class _MyNewBarState extends State<MyNewBar>{
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home')
+              icon: Icon(Icons.home,color: Colors.blue[800],),
+              title: Text('Home',style: TextStyle(color: Colors.blue[800]))
           ),
           BottomNavyBarItem(
-              icon: Icon(Icons.assignment_turned_in_rounded),
-              title: Text('My Work')
+              icon: Icon(Icons.assignment_turned_in_rounded,color: Colors.blue[800]),
+              title: Text('My Work',style: TextStyle(color: Colors.blue[800]))
           ),
           BottomNavyBarItem(
-              icon: Icon(Icons.circle_notifications),
-              title: Text('Notifications')
+              icon: Icon(Icons.circle_notifications,color: Colors.blue[800]),
+              title: Text('Notifications',style: TextStyle(color: Colors.blue[800]))
           ),
           BottomNavyBarItem(
-              icon: Icon(Icons.pending_rounded),
-              title: Text('More')
-          )
+              icon: Icon(Icons.pending_rounded,color: Colors.blue[800]),
+              title: Text('More',style: TextStyle(color: Colors.blue[800])),
+          ),
         ],
 
       ),

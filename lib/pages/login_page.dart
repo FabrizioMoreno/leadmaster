@@ -30,9 +30,9 @@ class _LoginPageState extends State<Login> {
 
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user == null) {
-        print('User is currently signed out!');
+        print('El usuario cerro sesion!');
       } else {
-        print('User is signed in!');
+        print('El usuario ha iniciado sesion!');
         Navigator.push(
             context, MaterialPageRoute(
             builder: (context) => MenuPage()));

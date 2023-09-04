@@ -13,6 +13,7 @@ class _NotificationPage extends State<NotificationPage>{
         child: Column(
           children: <Widget>[
             const SizedBox(height: 40,),
+
             Text("NotificationPage")
           ],
         ),

@@ -40,7 +40,7 @@ class _HomePage extends State<HomePage>{
                         ),
                       ),
                     ),
-                    Icon(Icons.person_add_alt_1,size: 40,)
+                    Icon(Icons.person_add_alt_1,size: 30,)
                   ],
                 ),
             ),
@@ -67,6 +67,7 @@ class _HomePage extends State<HomePage>{
                   ],
               ),
             ),
+
           ]
         ),
       ),
