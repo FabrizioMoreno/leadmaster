@@ -75,7 +75,9 @@ class _LoginPageState extends State<Login> {
             MyTextfield(
               controller: usernameController,
               hintText: 'Correo electronico',
-              obscureText: false,),
+              obscureText: false,
+              radius: 30, prefixIcon: null, suffixIcon: null,
+            ),
             const SizedBox(height: 10,),
             MyTextfieldPassword(
               controller: passwordController,

@@ -41,7 +41,9 @@ class _SignUpPageState extends State<SignUp>{
             MyTextfield(
               controller: usernameController,
               hintText: 'Nombre de usuario',
-              obscureText: false,),
+              obscureText: false,
+              radius: 20, suffixIcon: null, prefixIcon: null,
+            ),
             const SizedBox(height: 10,),
             MyTextfieldPassword(
               controller: passwordController,

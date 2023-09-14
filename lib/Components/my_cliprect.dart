@@ -1,22 +1,33 @@
 import 'package:flutter/material.dart';
 
 class MyClipRect extends StatelessWidget{
-  final Container container;
+  final Widget container;
   final bool isSelected;
+  final BorderRadius borderRadius;
+  final BoxBorder? boxBorder;
+  final int color1;
+  final int color2;
   const MyClipRect({
     super.key,
     required this.container,
-    required this.isSelected
+    required this.isSelected,
+    required this.borderRadius,
+    required this.boxBorder,
+    required this.color1,
+    required this.color2
   });
   @override
   Widget build(BuildContext context){
     return ClipRRect(
-      borderRadius: BorderRadius.circular(5.0),
+      borderRadius: borderRadius,
         child:Stack(
         children: <Widget>[
           Positioned.fill(child: Container(
             decoration: BoxDecoration(
-                color: Color(isSelected? 0x7B1565C0 : 0xFFEEEEEE)
+                border: boxBorder,
+                borderRadius: borderRadius,
+                color: Color(isSelected? color1 : color2),
+                //border
               /*gradient: LinearGradient(
                               colors: <Color>[
                                 Color(0xFF807F7F),

@@ -11,7 +11,6 @@ class HomePage extends StatefulWidget{
 }
 class _HomePage extends State<HomePage>{
   final textSearch = TextEditingController();
-  int _dropDownValue = 0;
   List<String> dropdownItems = [
     'Item 1',
     'Item 2',
@@ -45,7 +44,7 @@ class _HomePage extends State<HomePage>{
                 ),
             ),
             const SizedBox(height: 20,),
-            MyTextfield(controller: textSearch, hintText: "Buscar tableros", obscureText: false),
+            MyTextfield(controller: textSearch, hintText: "Buscar tableros", obscureText: false, radius: 30, prefixIcon: null, suffixIcon: null,),
             Padding(padding: EdgeInsets.symmetric(horizontal: 30),
               child :Row(
                 mainAxisAlignment: MainAxisAlignment.start,

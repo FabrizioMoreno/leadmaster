@@ -37,6 +37,10 @@ class _MyWorkPage extends State<MyWorkPage>{
                   Expanded(child:
                     Padding(padding: EdgeInsets.symmetric(horizontal: 10),
                         child: MyClipRect(
+                            color1: 0x7B1565C0,
+                            color2: 0xFFEEEEEE,
+                            borderRadius: BorderRadius.circular(5.0),
+                            boxBorder: null,
                             container: Container(
                               child: Row(
                                 children: [
@@ -59,6 +63,10 @@ class _MyWorkPage extends State<MyWorkPage>{
                   ),
                   Padding(padding: EdgeInsets.symmetric(horizontal: 10),
                     child: MyClipRect(
+                      color1: 0x7B1565C0,
+                      color2: 0xFFEEEEEE,
+                      borderRadius: BorderRadius.circular(5.0),
+                      boxBorder: null,
                       container: Container(
                         child: Row(children: [
                           TextButton(
@@ -88,100 +96,48 @@ class _MyWorkPage extends State<MyWorkPage>{
                scrollDirection: Axis.horizontal,
                children: [
                  Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                  MyClipRect(
-                     container: Container(
-                       width: 100,
-                       child: Column( // Cambia esta alineación según tus necesidades
-                         children: [
-                           Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                             child:
-                             Text("0",style: TextStyle(fontSize: 20),),
-
-                           ),
-                           const Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                             child: Text("Fechas pasadas"),
-                           ),
-                         ],
-                       ),
-                     ),
-                    isSelected: false,
-                 ),
-                 ),
-                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                 MyClipRect(
-                     container: Container(
-                       width: 100,
-                       child: Column( // Cambia esta alineación según tus necesidades
-                         children: [
-                           Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                             child:
-                             Text("0",style: TextStyle(fontSize: 20),),
-
-                           ),
-                           Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                             child: Text("Hoy                          "),
-                           )
-                         ],
-                       ),
-                     ),
-                   isSelected: false,
-                 ),
-                 ),
-
-                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                  MyClipRect(
-                     container: Container(
-                       width: 100,
-                       child: Column( // Cambia esta alineación según tus necesidades
-                         children: [
-                           Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                             child:
-                             Text("0",style: TextStyle(fontSize: 20),),
-
-                           ),
-                           Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                             child: Text("Esta semana"),
-                           )
-                         ],
-                       ),
-                     ),
-                    isSelected: false,
-                 ),
+                  GestureDetector(onTap: (){
+                    setState(() {
+                      selected = 1;
+                    });
+                  },
+                    child: MyClipRect(
+                      color1: 0x7B1565C0,
+                      color2: 0xFFEEEEEE,
+                      borderRadius: BorderRadius.circular(5.0),
+                      boxBorder: null,
+                      container: Container(
+                        width: 100,
+                        child: Column( // Cambia esta alineación según tus necesidades
+                          children: [
+                            Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                              child:
+                              Text("0",style: TextStyle(fontSize: 20),),
+                            ),
+                            const Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
+                              child: Text("Fechas pasadas"),
+                            ),
+                          ],
+                        ),
+                      ),
+                      isSelected: selected==1? true : false,
+                    ),
+                  )
                  ),
                  Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                 MyClipRect(
-                     container: Container(
-                       width: 100,
-                       child: Column( // Cambia esta alineación según tus necesidades
-                         children: [
-                           Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                             child:
-                             Text("0",style: TextStyle(fontSize: 20),),
-
-                           ),
-                           Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                             child: Text("La próxima semana"),
-                           )
-                         ],
-                       ),
-                     ),
-                   isSelected: false,
-                 ),
-                 ),
-                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                 MyClipRect(
-                     container: Container(
-                       /*child: GestureDetector(
-                                onTap: (){setState(() {
-                                  selected = 4;
-                                });},
-                                child: Row(*/
-                       width: 100,
-                       child: GestureDetector(
-                         onTap: (){setState(() {
-                           selected = 4;
-                         });},
-                         child: Column(// Cambia esta alineación según tus necesidades
+                  GestureDetector(onTap: (){
+                     setState(() {
+                       selected = 2;
+                     });
+                   },
+                     child: MyClipRect(
+                       color1: 0x7B1565C0,
+                       color2: 0xFFEEEEEE,
+                       borderRadius: BorderRadius.circular(5.0),
+                       boxBorder: null,
+                       container: Container(
+                         width: 100,
+                         child: Column( // Cambia esta alineación según tus necesidades
                            children: [
                              Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
                                child:
@@ -189,39 +145,139 @@ class _MyWorkPage extends State<MyWorkPage>{
 
                              ),
                              Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                               child: Text("Más tarde             "),
+                               child: Text("Hoy                          "),
                              )
                            ],
                          ),
-                       )
-                     ),
-                   isSelected: true,
+                       ),
+                     isSelected: selected==2? true : false,
+                   ),
+                  ),
                  ),
+
+                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
+                  GestureDetector(onTap: (){
+                     setState(() {
+                       selected = 3;
+                     });
+                   },
+                     child: MyClipRect(
+                       color1: 0x7B1565C0,
+                       color2: 0xFFEEEEEE,
+                       borderRadius: BorderRadius.circular(5.0),
+                       boxBorder: null,
+                       container: Container(
+                         width: 100,
+                         child: Column( // Cambia esta alineación según tus necesidades
+                           children: [
+                             Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                               child:
+                               Text("0",style: TextStyle(fontSize: 20),),
+
+                             ),
+                             Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
+                               child: Text("Esta semana"),
+                             )
+                           ],
+                         ),
+                       ),
+                      isSelected: selected==3? true : false,
+                   ),
+                  )
                  ),
                  Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
-                 MyClipRect(
-                     container: Container(
-                       width: 100,
-                       child: Column( // Cambia esta alineación según tus necesidades
-                         children: [
-                           Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                             child:
-                             Text("0",style: TextStyle(fontSize: 20),),
+                   GestureDetector(onTap: (){
+                     setState(() {
+                       selected = 4;
+                     });
+                   },
+                     child: MyClipRect(
+                       color1: 0x7B1565C0,
+                       color2: 0xFFEEEEEE,
+                       borderRadius: BorderRadius.circular(5.0),
+                       boxBorder: null,
+                       container: Container(
+                         width: 100,
+                         child: Column( // Cambia esta alineación según tus necesidades
+                           children: [
+                             Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                               child:
+                               Text("0",style: TextStyle(fontSize: 20),),
 
-                           ),
-                           Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
-                             child: Text("Sin fecha"),
-                           )
-                         ],
+                             ),
+                             Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
+                               child: Text("La próxima semana"),
+                             )
+                           ],
+                         ),
                        ),
-                     ),
-                   isSelected: false,
+                     isSelected: selected==4? true : false,
+                   ),
+                   ),
                  ),
+                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
+                   GestureDetector(onTap: (){
+                     setState(() {
+                       selected = 5;
+                     });
+                   },
+                     child: MyClipRect(
+                       color1: 0x7B1565C0,
+                       color2: 0xFFEEEEEE,
+                       borderRadius: BorderRadius.circular(5.0),
+                       boxBorder: null,
+                       container: Container(
+                         width: 100,
+                           child: Column(// Cambia esta alineación según tus necesidades
+                             children: [
+                               Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                                 child:
+                                 Text("0",style: TextStyle(fontSize: 20),),
+
+                               ),
+                               Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
+                                 child: Text("Más tarde             "),
+                               )
+                             ],
+                           ),
+                       ),
+                     isSelected: selected==5? true : false,
+                   ),
+                   ),
+                 ),
+                 Padding(padding: EdgeInsets.symmetric(horizontal: 10),child:
+                   GestureDetector(onTap: (){
+                     setState(() {
+                       selected = 6;
+                     });
+                   },
+                     child:MyClipRect(
+                       color1: 0x7B1565C0,
+                       color2: 0xFFEEEEEE,
+                       borderRadius: BorderRadius.circular(5.0),
+                       boxBorder: null,
+                       container: Container(
+                         width: 100,
+                         child: Column( // Cambia esta alineación según tus necesidades
+                           children: [
+                             Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                               child:
+                               Text("0",style: TextStyle(fontSize: 20),),
+
+                             ),
+                             Padding(padding:  EdgeInsets.symmetric(horizontal: 10),
+                               child: Text("Sin fecha"),
+                             )
+                           ],
+                         ),
+                       ),
+                     isSelected: selected==6? true : false,
+                   ),
+                   )
                  )
                ],
              ),
              ),
-
            ],
          ),
 
